@@ -14,6 +14,7 @@
     <table>
         <thead>
             <tr>
+                <!--Table header-->
                 <th>Category</th>
                 <th>Title</th>
                 <th>Year</th>
@@ -25,11 +26,13 @@
             </tr>
         </thead>
         <tbody>
+            
             @foreach (_413Assignment3.Models.MovieAddition movie in Model)
             {
-                @if (movie.MovieTitle != "Independence Day")
+                @if (movie.MovieTitle != "Independence Day" || movie.MovieTitle != "")
                 {
                     <tr>
+                        <!--Table row for each movie details-->
                         <td>@movie.Category</td>
                         <td>@movie.MovieTitle</td>
                         <td>@movie.Year</td>

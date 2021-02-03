@@ -13,15 +13,17 @@
     <br />
     <h2>Your movie has been processed.</h2>
 
+    <!--Hint at lending The Last Airbender to someone else, probably an enemy-->
     @if (Model.MovieTitle == "The Last Airbender")
     {
         @:That movie cannot be added.  Perhaps you were thinking of lending it to someone else... forever.
     }
     else
     {
-        @:Great! Your movie has been added  to the movie list
+        @:Great! Your movie has been added to the movie list
     }
 
+    <!--Link to view all of the added movies-->
     <div>
         Click <a asp-action="DisplayMovies">Here</a> to view my list of movies!
     </div>

@@ -41,9 +41,14 @@ namespace _413Assignment3.Controllers
         [HttpPost]
         public IActionResult AddMovie(MovieAddition appResponse)
         {
-
-            TempStorage.AddApplication(appResponse);
-            return View("Confirmation", appResponse);
+            //if user field in all fields correctly, save in TempStorage and return Confirmation view
+            if (ModelState.IsValid)
+            {
+                TempStorage.AddApplication(appResponse);
+                //Response.Redirect("Confirmation", appResponse);
+                return View("Confirmation", appResponse);
+            }
+            return View();
         }
 
         public IActionResult Privacy()

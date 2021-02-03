@@ -1,0 +1,31 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewBag.Title = Model.MovieTitle + " Added!";
+}
+
+@model _413Assignment3.Models.MovieAddition 
+
+<div class="text-center">
+    <h1 class="display-4">@ViewBag.Title</h1>
+    <br />
+    <br />
+    <h2>Your movie has been processed.</h2>
+
+    @if (Model.MovieTitle == "The Last Airbender")
+    {
+        @:That movie cannot be added.  Perhaps you were thinking of lending it to someone else... forever.
+    }
+    else
+    {
+        @:Great! Your movie has been added  to the movie list
+    }
+
+    <div>
+        Click <a asp-action="DisplayMovies">Here</a> to view my list of movies!
+    </div>
+
+
+</div>
+

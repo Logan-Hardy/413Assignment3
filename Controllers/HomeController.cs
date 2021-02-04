@@ -30,7 +30,7 @@ namespace _413Assignment3.Controllers
 
         public IActionResult DisplayMovies()
         {
-            return View(TempStorage.Applications);
+            return View(TempStorage.Applications.Where(movie => movie.MovieTitle != "Independence Day"));
         }
 
         [HttpGet]
@@ -48,7 +48,11 @@ namespace _413Assignment3.Controllers
                 //Response.Redirect("Confirmation", appResponse);
                 return View("Confirmation", appResponse);
             }
-            return View();
+            else
+            {
+                return View();
+            }
+
         }
 
         public IActionResult Privacy()

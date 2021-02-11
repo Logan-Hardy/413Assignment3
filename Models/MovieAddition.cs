@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace _413Assignment3.Models
 {
+    //Class used for adding movies
     public class MovieAddition
     {
         [Required]
